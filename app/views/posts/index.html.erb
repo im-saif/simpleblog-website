@@ -1,0 +1,15 @@
+<% if not user_signed_in? %>
+
+<div class = 'jumbotron text-center'>
+  <h1> <strong> Welcome to Simple Blog </strong> </h1>
+  <p class= 'lead'> Create an account or Log In and start creating blogs! </p>
+</div>
+
+<% else %>
+<div class = 'jumbotron text-left' >
+<h2> <strong> Welcome, <%= current_user.usernames %> </strong> </h2>
+<br>
+<p class='lead'> Check out the blogs by going to the Posts section or create your own blog! </p>
+</div>
+
+<% end %>

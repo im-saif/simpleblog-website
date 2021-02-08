@@ -1,0 +1,9 @@
+<h1 class= 'text-center'> Blog Posts </h1>
+<hr>
+     <% @posts.each do |post| %>
+         <div class = 'well'>
+            <h3> <strong> <%= post.title %></strong> </h3>
+            <p> <%= post.body %> </p>
+            <%= link_to 'More Options', post_path(post), :class => 'btn btn-default' %>
+        </div>
+    <% end %>
